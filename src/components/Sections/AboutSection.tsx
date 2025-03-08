@@ -2,14 +2,14 @@
 
 import { motion } from 'framer-motion';
 import styles from '../../app/commonstyles';
-import { staggerContainer, fadeIn, planetVariants } from '../../utils/styles';
+import { fadeIn, planetVariants } from '../../utils/styles';
 import { Separator } from '../ui/separator';
+import Image from 'next/image';
 
 const AboutSection = () => {
     return (
         <section className={`${styles.paddings} relative z-10`}>
             <motion.div
-                variants={staggerContainer}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.25 }}
@@ -20,9 +20,11 @@ const AboutSection = () => {
                     variants={planetVariants('left')}
                     className={`flex-1 ${styles.flexCenter}`}
                 >
-                    <img
+                    <Image
                         src='/globe1.png'
                         alt='getstarted'
+                        height={300}
+                        width={300}
                         className="w-[90%] h-[90%] object-contain"
                     />
                 </motion.div>

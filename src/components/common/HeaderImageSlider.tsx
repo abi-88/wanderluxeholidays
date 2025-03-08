@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
@@ -18,21 +18,16 @@ const images = [
 
 export default function HeaderImageSlider() {
     const [currentIndex, setCurrentIndex] = useState(0)
-    const timeoutRef = useRef(null)
-
     useEffect(() => {
         AOS.init({ duration: 1000, once: true })
-        startAutoTransition()
-        return () => clearTimeout(timeoutRef.current)
-    }, [currentIndex])
-
-    const startAutoTransition = () => {
-        timeoutRef.current = setTimeout(() => {
+        let timeOutId = setTimeout(() => {
             changeImage('next')
         }, 6000)
-    }
+        return () => clearTimeout(timeOutId)
+    }, [currentIndex])
 
-    const changeImage = (direction) => {
+
+    const changeImage = (direction: any) => {
         setCurrentIndex(prevIndex =>
             direction === 'next' ? (prevIndex + 1) % images.length : (prevIndex - 1 + images.length) % images.length
         )

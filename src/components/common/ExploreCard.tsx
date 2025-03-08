@@ -3,8 +3,9 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Image from 'next/image';
 
-const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }: any) => {
+const ExploreCard = ({ id, imgUrl, title, index, handleClick }: any) => {
     useEffect(() => {
         AOS.init({
             duration: 1000,
@@ -19,9 +20,11 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }: any) => 
             className={`relative flex items-center justify-center min-w-[30vw] h-[70vh] cursor-pointer overflow-hidden rounded-[24px]`}
             onClick={() => handleClick(id)}
         >
-            <img
+            <Image
                 src={imgUrl}
                 alt={title}
+                height={500}
+                width={500}
                 className="absolute w-full h-full object-cover rounded-[24px] transition-transform duration-300 ease-in-out hover:scale-110"
             />
             <div className="absolute bottom-0 p-8 justify-start w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]">
