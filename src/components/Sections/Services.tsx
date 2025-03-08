@@ -1,9 +1,8 @@
 "use client"
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { services } from '@/constants'
 import Image from 'next/image'
-import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 export default function Services() {

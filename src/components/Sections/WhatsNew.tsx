@@ -3,14 +3,13 @@
 import { motion } from 'framer-motion';
 import { newFeatures } from '@/constants';
 import styles from '../../app/commonstyles';
-import { staggerContainer, fadeIn, planetVariants } from '../../utils/styles';
+import { fadeIn, planetVariants } from '../../utils/styles';
 import NewFeatures from '../common/NewFeatures';
 
 const WhatsNew = () => {
     return (
         <section className={`sm:p-16 xs:p-8 px-6 py-12 relative z-10`}>
             <motion.div
-                variants={staggerContainer}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.25 }}

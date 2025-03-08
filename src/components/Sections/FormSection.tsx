@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Instagram, Facebook, Linkedin } from "lucide-react";
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function FormSection() {
     return (
@@ -33,9 +34,11 @@ export default function FormSection() {
             {/* CEO Info Box */}
             <Card className="flex-1 bg-white shadow-lg">
                 <CardContent className="p-8 text-center">
-                    <img
+                    <Image
                         src="/images/founder.jpeg"
                         alt="CEO of Wanderluxe"
+                        height={40}
+                        width={40}
                         className="w-40 h-40 rounded-full mx-auto mb-6 shadow-md"
                     />
                     <h3 className="text-2xl font-semibold text-[#3378b0]">Alex Johnson</h3>

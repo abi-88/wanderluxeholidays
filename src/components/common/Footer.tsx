@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone, MapPin, ArrowRight, Map, Briefcase, ImageIcon, Users } from 'lucide-react'
+import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone, MapPin, Map, Briefcase, ImageIcon, Users } from 'lucide-react'
 import { Separator } from "@/components/ui/separator"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
